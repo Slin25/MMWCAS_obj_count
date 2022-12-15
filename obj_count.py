@@ -12,7 +12,8 @@ def main():
     parser.add_argument('-d', '--data', action='store', dest='data',
                         help='Path to actual .mat data file', required=True)
     parser.add_argument('-b', '--back', action='store', dest='back',
-                        help='Path to background .mat data file', required=True)
+                        default='',
+                        help='Path to background .mat data file')
     parser.add_argument('-pl', '--plot', action='store', dest='plot',
                         default='True', choices=['True', 'False'],
                         help='Plot enabled/disabled')
@@ -31,7 +32,10 @@ def main():
 
     # Load the .mat data files and get the xyz and velocity values
     xyz_all = sio.loadmat(args.data)['xyz_all'][0]
-    xyz_back = sio.loadmat(args.back)['xyz_all'][0]
+    if args.back != '':
+        xyz_back = sio.loadmat(args.back)['xyz_all'][0]
+    else:
+        xyz_back = []
 
     # Calculate the obj count using DBSCAN clustering
     obj_count, avg_clust, labels = dbscan_mode_clust(xyz_all=xyz_all, 

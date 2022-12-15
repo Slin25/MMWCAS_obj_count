@@ -19,7 +19,7 @@ def plot_data(xyz_data: list, axis: str) -> None:
     corresponds to a velocity value with the color key on the right side.
 
     Args
-    ---------
+    ----
         xyz_data: raw xyz and velocity data for all the frames
         axis: which axes to plot from the options of ['xyz', 'xy', 'xz', 'yz']
     Returns

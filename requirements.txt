@@ -1,0 +1,6 @@
+scipy
+numpy
+matplotlib.pyplot
+matplotlib.widgets
+collections
+sklearn.cluster

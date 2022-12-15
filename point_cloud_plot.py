@@ -1,7 +1,7 @@
+from matplotlib.widgets import Slider
+import matplotlib.pyplot as plt
 import scipy.io as sio
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.widgets import Slider
 import argparse
 
 VEL_THRESH = 0.0
@@ -13,7 +13,7 @@ xyz_lut = {
 }
 
 def plot_data(xyz_data: list, axis: str) -> None:
-    """
+    '''
     Plots the raw data and removes the absolute velocities less than VEL_THRESH.
     A frame slider bar to change which frame to plot and the color of the point
     corresponds to a velocity value with the color key on the right side.
@@ -25,7 +25,7 @@ def plot_data(xyz_data: list, axis: str) -> None:
     Returns
     -------
         NONE
-    """
+    '''
 
     # XYZ Limits
     X_PLIM, Y_PLIM, Z_PLIM = [np.max([np.max(xyz_data[i][:, j]) for i in range(len(xyz_data))]) for j in range(3)]

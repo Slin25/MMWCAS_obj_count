@@ -54,6 +54,7 @@ To plot the point cloud of the raw data
 python3 point_cloud_plot.py -p <PATH to .mat file>
 ```
 Should see a popup window of the point cloud and a frame slider at the bottom:
+
 <img src="/docs/point_cloud_example.png" alt="Point Cloud Example Popup" width="30%"/>
 
 To calculate the object count
@@ -61,6 +62,7 @@ To calculate the object count
 python3 obj_count.py -d <PATH to actual data .mat file> -b <PATH to background data .mat file>
 ```
 Should see a popup window of the filtered point cloud a frame slider at the bottom and the object count result printed in your terminal:
+
 <img src="/docs/obj_count_example.png" alt="Object Count Example Popup" width="30%"/>
 
 To calculate the object count without plotting
@@ -73,4 +75,5 @@ To calculate the object count and show the cluster colors
 python3 obj_count.py -d <PATH to actual data .mat file> -b <PATH to background data .mat file> -c cluster
 ```
 Should see a similar popup, but now the colors of the points are grouped by the clusters:
+
 <img src="/docs/obj_count_clust_example.png" alt="Object Count Example Popup" width="30%"/>

@@ -8,6 +8,7 @@ Object counting algorithm using DBSCAN clustering for mmWave Cascade radar. The 
 ├── noise_filters.py            # Background noise filtering functions
 ├── plotting.py                 # Plotting point cloud with filtering
 ├── requirements.txt            # Required Python libraries to install
+├── docs/                       # Images for documentation
 ├── LICENSE
 └── README.md
 
